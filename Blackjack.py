@@ -8,7 +8,6 @@ diamond = "\u2666"
 club = "\u2663"
 
 
-
 class Dealer(object):
     def __init__(self, arg):
         self.arg = arg
@@ -47,19 +46,36 @@ class Card(object):
             return [self.number]
         else:
             return [10]
+class Deck(object):
+    def __init__(self):
+        self.cards_array = []
+        for each_card in range(num_cards):
+            each_card = Card(spade, each_card)
+            cards_array.append(each_card)
+            each_card = Card(heart, each_card)
+            cards_array.append(each_card)
+            each_card = Card(diamond, each_card)
+            cards_array.append(each_card)
+            each_card = Card(club, each_card)
+            cards_array.append(each_card)
+        print(cards_array)
+
+deck1 = Deck()
+print(deck1)
 
 
-# makes 52 cards
+
+# makes 52 cards (13 four times)
 # put them in an array
 # pop card from the top
 
 
 
-card1 = Card(spade, 3)
-card2 = Card(heart, 5)
-card3 = Card(club, 11)
-card4 = Card(diamond, 1)
-cards_array = [card1, card2, card3, card4]
-
-for card in cards_array:
-    print(card)
+# card1 = Card(spade, 3)
+# card2 = Card(heart, 5)
+# card3 = Card(club, 11)
+# card4 = Card(diamond, 1)
+# cards_array = [card1, card2, card3, card4]
+#
+# for card in cards_array:
+#     print(card)
