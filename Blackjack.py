@@ -1,3 +1,4 @@
+from random import shuffle
 
 
 # poker_queue = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
@@ -48,21 +49,17 @@ class Card(object):
             return [10]
 class Deck(object):
     def __init__(self):
-        self.cards_array = []
-        for each_card in range(num_cards):
-            each_card = Card(spade, each_card)
-            cards_array.append(each_card)
-            each_card = Card(heart, each_card)
-            cards_array.append(each_card)
-            each_card = Card(diamond, each_card)
-            cards_array.append(each_card)
-            each_card = Card(club, each_card)
-            cards_array.append(each_card)
-        print(cards_array)
+        self.cards = []
+        for each_card in range(1,14):
+            self.cards.append(Card(spade, each_card))
+            self.cards.append(Card(heart, each_card))
+            self.cards.append(Card(diamond, each_card))
+            self.cards.append(Card(club, each_card))
 
 deck1 = Deck()
-print(deck1)
-
+shuffle(deck1.cards)
+for card in deck1.cards:
+    print(card)
 
 
 # makes 52 cards (13 four times)
